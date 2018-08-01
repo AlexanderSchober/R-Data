@@ -1,0 +1,466 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9660\viewh16200\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\f0\b\fs48 \cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Current Version 0.2.03 Release\
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Current Version 0.2.02 Release\
+
+\fs24 \
+New Additions:
+\b0 \
+- The gaussian function was tested and is now fully operational. It is found that fitting a lorenzian with a gaussian line shape gives no realistic interpretation.\
+- It is now possible to edit the names of the functions and this name will be saved accordingly into the save file upon export.\
+- The name will also now be available in the description upon hoovering over the function.\
+- The save of the fitting subplots has been corrected and can now be directed towards a specific wind. To this is the addition of a data saver, that will take plots\'92 and interactive plots\'92 data and save it to simple text files. \
+- Further more an option was added to invert X and Y axis when the plot is done vertically.\
+- Multiple dataset can be loaded at once now. \
+- An early stage of the dataset manager is in place. He will allow the creation of workflows and consolidation of working environment. This should allow faster understanding of the data. \
+- Introduced a reworked information sheet for datafiles. They now poses a name to allow easier navigation. \
+- The code was reworked and made much nicer. The naming of the files is already much clearer. An effort is underway to rename functions. Note that this takes time but sould allow more development opportunities.\
+\
+
+\b \
+Fixed MajorBugs:
+\b0 \
+- Single acquisitions were not being converted nor imported or fitted. This has been addressed in a major rework.\
+- There was a bug not drawing all functions present. This has been resolved.\
+- The copy option for fitting was not taking over parameters from new functions.\
+- The functions will now compute their parameter number on their own reducing the need for editing in the function definition file.\
+- The placement and processing of the ticks in SimplePlot was not behaving accordingly. This has been addressed in this version.\
+- Addressed a major bound processing error.\
+- A major error was present in the fit loading preventing certain scenarios to open. \
+
+\b \
+Fixed Minor Bugs:\
+
+\b0 - The fitting procedure will now include the actual list of elements into the system.\
+- This means that adding a function will now also tell the system to systematically consider it for fit.\
+- The functions can now all be selected to observe the parameters. \'91None\'92 will be retuned if no single function has not been created.\
+- Fixed a big part of the side information pane.\
+- The fit parameter window is now reworked slightly to only show functions that have been selected. It can now also accommodate for functions with more than four parameters which was a main weakness after the implementation of new fitting scripts.\
+- Fixed a minor bug that was saving a tiny blank png image into the root directory.\
+- A small bug did not allow the proper loading of the names.\
+- The contour window units were not scientific this caused problems. This has been addressed now. It makes more sense to start scientific and then go from there.\
+- The number formats displayed in the fitting window will now be scientific when below 1. This was son to avoid fit errors. Indeed the rounding error was applied over small data and then reused. This caused fits with very small values to never converge. \
+- Not the right data was selected upon import.\
+- Fixed a the popup to behave well.\
+- The trace options were not being loaded on import. This has been addressed.\
+- The informations sheet was not losing appropriately because of not considering the single measurement case.\
+- The color selector was fixed\
+- The subtraction routines will now also take into account non lorenzian functions.\
+- The fitting system was never stopping at the right borders, this has been addressed. \
+
+\b \
+Bug Awareness:\
+
+\b0 - The selector in the fit visualisation window is still not grading the actual parameter names ans is therefore subject to break when new functions are added.\
+- The label for the parameter name in the information section fo the fitting window fo not change according to the real name this will be corrected later\'85\
+- Th trace option is off by default for some reason. Will be addressed eventually\
+
+\b \
+To come improvements:\
+
+\b0 - The fitting routines are being generalised further to allow straight forward implementation of new fitting routines without to much difficulties. \
+- A tutorial has to be implemented to allow users to add their own fitting functions.\
+- Saving should be able to be performed as text and as image and more image options should be implemented into the simple plot routines. \
+- Plans of having a stand alone version of simple plot are possible\'85\
+
+\b\fs48 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.2.01 Release\
+
+\fs24 \
+New Additions:
+\b0 \
+- It\'92s all about fitting more\
+
+\b \
+Fixed MajorBugs:\
+
+\b0 - The absorption in the simulation scripts was not being processed properly. \
+- Also added the intensity as a parameter.\
+- The wavelength was wrongly interpreted in the simulations leading to wrong values for index and absorption\
+- Single acquisitions were not being converted nor imported or fitted. This has been addressed in a amor rework\
+
+\b \
+Fixed Minor Bugs:\
+
+\b0 - The save routines for fitting were updated to accommodate the modular characteristics of it.\
+- The load routines were adapted to accommodate the modular characteristics.\
+
+\b \
+To come improvements:\
+
+\b0 - The fitting routines are being generalised further to allow straight forward implementation of new fitting routines without to much difficulties. \
+- A tutorial has to be implemented to allow users to add their own fitting functions.\
+
+\b\fs48 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.2.00 Release\
+
+\fs24 \
+New Additions:
+\b0 \
+- This version was dedicated in the creation of a simulation script editor. This allows to load and edit Raman simulation scripts. The scripts allows for loading Raman profiles, Index profiles and absorption profiles which are all three dependant on the wavelength. Once loaded it is possible to set the number of samples and their respective dimensions. Further along it is possible to set the Raman properties and the processing characteristics. The script is optimised in a way utilising all cpu resources. Therefore setting all processors of a computer is not recommended. The processing allows to set up to three variables. \
+
+\b\fs48 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.1.14 Release\
+
+\fs24 \
+New Additions:
+\b0 \
+- The residual plots where now added, note that the computation of all residual plots takes a lot of time upon import (we should run it in the background)\
+
+\b \
+Fixed MajorBugs:\
+
+\b0 - the unit scale was not adapted in the main data plot.\
+
+\b \
+Fixed Minor Bugs:\
+
+\b0 - The log list upon visual change of the fit parameter was not getting reseted. \
+- The refresh of the parameter window after seeing the visual entries is now effective.\
+- Fixed a bug where the close button of the settings window was not connected.\
+
+\b \
+Bug Awareness:
+\b0 \
+- \
+
+\b \
+To come improvements:\
+
+\b0 - dissociate the background routine for residual processing\'85 
+\b \
+
+\b0 - The simulation interface is now complete and can be launched by R-Data-Sim.py It is now still purely script based and will therefore have to be edited in the source file. This will be changed eventually. The idea being to introduce a signal generator, a index generator and a absorption generator. These three files will then be fed into the simulation interface. \
+
+\b\fs48 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.1.13 Release\
+
+\fs24 \
+New Additions:
+\b0 \
+- The SimplePlot Framework now assures some more options than zooming. It is still under construction but expected to yield some results.\
+- Consolidating the file management routines by slowly moving out elements from the Utility file.\
+- Added a new subroutine able to read and replace single lines in the preference file. This will allow in the future to store informations in this text file and to access and store them as needed. Now it is limited to simple file manipulations. \
+- This allowed the main window reflect the current version which is easily fetched in preference file. \
+- in the philosophy of staying geekee a logo was added. (it will probably be improved\'85)\
+- We can now see individual parameter evolutions in the fitting parameter window\
+\
+
+\b \
+Fixed MajorBugs:\
+
+\b0 - Addressed the vanishing of the fitting window on adding a new curve in release 0.1.12
+\b \
+
+\b0 - Addressed the error when adding a new curve crashed the view in the fitting mode \
+- The interactive Plot routine had some issues concerning the modification\
+- Fixed some internal plotting routines
+\b \
+\
+Fixed Minor Bugs:\
+
+\b0 - Fixed some internal errors that were not apparent to the user.\
+- In order to load a fit our application was asking for the folder. This caused headaches on windows as the file browser is horrible. Now we will simply use the file browser which is much more convenient. \
+
+\b \
+Bug Awareness:
+\b0 \
+- The selector buttons for each display mode are outdated and do not function as expected.They will be changed leading to an overhaul of the fitting window layout.\
+
+\b \
+To come improvements:\
+
+\b0 - Knowing that it is possible to export subtracted fits and signals means that all routines are win place to take it a step further and allow to see more options. Like fit rest or only each component\'85\
+- The read me file is seriously outdated and solely focused on imports and will therefore be modified now. \
+- revise the saving routine to be more accessible and intuitive with more options such as axes and automatic cursor removal.\
+- A standalone mode will be generated for the SimplePlot allowing for custom additions through scripts.\
+
+\b\fs48 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.1.12 Release\
+
+\fs24 \
+New Additions:\
+
+\b0 - A cascade class was interred as an addition and supplemental tool for visualising measurements. They have proven vital for temperature measurements as the classic Contour visualisation is not sufficient. \
+- The Data visualisation file SimplePlot.py has been broken down to account for different classes. All the related files are located in the SimplePlot Folder.\
+- The CPCA.py and Contour.py files have been separated and purged from unnecessary code left overs.
+\b \
+
+\b0 - The fitting parameter window can no be resized as wanted to allow the utilisation of the whole screen. \
+- The colours now can be selected and adjusted for each lorentzian. \
+- The ability to trace or not each lorentzian has been added. \
+- Group assignment is now possible.\
+- The group and color assignments are now saved along the fit. \
+- The SimplePlot Framework now assures some more options than zooming. It is still under construction but expected to yield some results.\
+\
+
+\b \
+Fixed MajorBugs:\
+
+\b0 - In widows the library for contour calculations was not linked properly, this has been fixed.
+\b \
+\
+Fixed Minor Bugs:
+\b0 \
+- The redraw option was having some minor difficulties running after the switch to the new function system. This has now been addressed. \
+- Fixed a minor bug not rendering the exact overlay when hoovering the functions. \
+
+\b \
+Bug Awareness:\
+
+\b0 - Adding a lorentzian causes an inevitable crash of the fit window. This will be addressed eventually. Also the display is not adapted and will be changed as adding a lorentzian always adds 0,0,0,0 on the parameters meaning that all the functions have to be manually reentered to not lose the current fit result. This should be addressed\'85\
+- The selector buttons for each display mode are outdated and do not function as expected.They will be changed leading to an overhaul of the fitting window layout.\
+
+\b \
+To come improvements:\
+
+\b0 - Knowing that it is possible to export subtracted fits and signals means that all routines are win place to take it a step further and allow to see more options. Like fit rest or only each component\'85\
+- The read me file is seriously outdated and solely focused on imports and will therefore be modified now. \
+- revise the saving routine to be more accessible and intuitive with more options such as axes and automatic cursor removal.\
+\
+
+\b \
+
+\fs48 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\fs24 \
+
+\fs48 Version 0.1.10 Release\
+
+\fs24 \
+New Additions:\
+
+\b0 - The lorentzians now don\'92t have a minimum anymore. This field will later be replaced by the asymmetry coefficient. \
+- The linear curve manager was was dissociated from a cumulative minimum which provided a unhealthy interpretation. \
+- The import procedure for data will now automatically adjust the size of the elements to accommodate for the loaded data. This means, no more guessing how many of what are present.\
+- Added the export of the range parameters of a fit\
+- Added the import of the range parameter and the processing.\
+- Added an option upon import that allows the user to select or deselect the range and unction import.\
+- Temperature dependant processing has been fixed and now fully fixed. This means that files can now be exported as temperature measurement.\
+- The Navigator in the fitting windows now shows properly the distance or temperature of the selected item.\
+- Introduced an all new boundary system in the fitting routines. This should facilitate the fitting and allow for faster convergence. \
+
+\b \
+Fixed MajorBugs:\
+
+\b0 - The save option was adapted to accommodate for the different curve types. 
+\b \
+
+\b0 - The fit propagation option was repaired and now will propagate all function types.\
+- Assured backward compatibility with older version fits.\
+- Fixed an error on transferring fixes.\
+- Removed the projection effect for temperature measurements.\
+- The axis of the Temperature was being interposed. This is not necessary in the case of temperatures or depth measurements\'85\
+- Fitting relies on residual calculations. smaller number where penalised by the presence of a quadratic power operations. This was corrected. \
+
+\b \
+\
+Fixed Minor Bugs:
+\b0 \
+- Changed the size of entry fields in the load-fitting panel\
+- Fixed a bug where the import from previous versions would result in an incorrect minimum. \
+- Fixed a bug where the import did not generate the total plot.\
+- Fixed minor error where line shape functions where set at 0 leading to hard interpretations. They are now superposed over the linear functions.\
+- Fixed fit propagation in the the step by step way and in the consolidation routines.\
+- Fixed the normalisation option in the fit window.\
+- Fixed Fixed a bug not attributing the right fixes while saving for the linear part.\
+- Fixed a bug not displaying the proper temperature range in the information window.\
+- Fixed a bug not counting the number of files in temperature measurements.\
+- Fixed some naming issues concerning the labels.\
+- Fixed the adding routines fro the new multifunction system.\
+- Fixed a bug where adding a function would mess with the fixed array.\
+- Adding a function was confusing the plot routines on the amount of elements to plot. This has been fixed. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx2918\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+\cf0 - The VoidPlot was implemented but not called this has been addressed.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qj\partightenfactor0
+
+\b \cf0 \
+Bug Awareness:\
+\
+To come improvements:\
+
+\b0 - The polynomial and gaussian options will come in the next versions as for now the other two options are enough. \
+- The \'91-\'91 sign next to each function will now be called \'91opts.\'92 and open an option dialogue eventually.\
+- Polynomial and Gaussian functions are yet not implemented. and therefore activating them will lead to big errors.\
+- Now that the new system is in place a closer look will be set to the asymmetric lorentzians.
+\b \
+
+\fs48 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.1.03 Release\
+
+\fs24 \
+New Additions:\
+\
+Fixed MajorBugs:\
+
+\b0 - The Load buttons were linked to the Save buttons unfortunately, overwriting the actual plot. This was fixed in the latest version.
+\b \
+
+\b0 - In the hope of being truly cross platform compatible: Dots are now completely committed from file pants as this causes substantial errors in the path management of windows. Even the software root directory was switched to R-Data_v0_1_03 as compared to R-Data_v0.1.03\
+- Fixed a major bug that render impossible some imports when the wavenumber array was reversed!!!
+\b \
+\
+Fixed Minor Bugs:
+\b0 \
+- Due to the poorly designed folder browser on windows, the raw import will now use the file method to access the information. 
+\b \
+
+\b0 - The UI in the Raw import window is now fully operational (all buttons are linked).
+\b \
+
+\b0 - Fixed a minor bug where opening the dialog to load a new processed file and then aborting would result in deleting the current loaded dataset.
+\b \
+
+\b0 - Fixed some overwhelming output in the file browser.
+\b \
+
+\b0 - Fixed a minor bug when the automatic resizing of the plot window should fail for slat lines at they do not have an extent into one direction. By default a factor of 1e-6 is added to each direction. \
+
+\b \
+Bug Awareness:\
+
+\b0 - A major bug is present in the handling of the the colour selectors in the contour window. It requires to set the range once first. This can be done by clicking range option and then simply selecting Apply. This will then process the range information and allow for the selection of the colour scale. It is understood that a numerical representation of the cursor values would be appreciated.\
+- Using the NMF in the PCA/NMF window is not thread secure and will therefore lock up the main Tkinter loop while running. This does not cause any big issues but does not indicate a hang up of the system. \
+- Some buttons in the UI of the PCA/NMF don\'92t behave accordingly, making this part chaotic. It will be revised.\
+
+\b \
+To come improvements:\
+
+\b0 - Sanity: The .py files will be toughly investigated for sanity and removing unused routines. Also version history manager will be used.\
+- Removing a lorenzian is not supported yet but should come in the next version\
+- The save and load logos should be more explicit.. \
+- A settings file that can be used to specify window sizes for example. \
+- A small Setting window for the overall Application settings\
+- Use the file browser to search for Raw import files\
+
+\b \
+
+\fs48 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.1.02 Release\
+
+\fs24 \
+New Additions:
+\b0 \
+- Added a application specific logo\
+- The Load and save were now moved into two notebook tabs in the fitting window.
+\b \
+
+\b0 - The user has now the ability to add fits. the button os located at the bottom and marked by a plus. This allows the user to add a lorenzian if he wishes. \
+- Added the redraw option in the right click part of the Fit button\
+
+\b \
+Fixed MajorBugs:\
+
+\b0 - It was already known that adding \'91to many\'92 lorenzians to fit would cause in the window becoming to big. To avoid this the entries for lorenzian parameters has been moved on scrollable canvas element.\
+- The fit window is made y resizable to accommodate for the previously fixed bug.
+\b  \
+
+\b0 - It was known that the fit window was always gaining focus on end of fit events. This has now been fixed by using mouse type driven focus of the objects using \'91
+\f1 \expnd0\expndtw0\kerning0
+tk_focusFollowsMouse()\'92.\
+- The previously found fix was removed as it caused the whole system to take random focus. Now the patch is applied to the enter exit methods in SimplePlot
+\f0\b \kerning1\expnd0\expndtw0 \
+\
+Fixed Minor Bugs:\
+
+\b0 - The interface of the raw importer was tweaked and more descriptions were added to allow an easier utilisation by the user.\
+- Fixed many resizing bugs in the fit window management.\
+
+\b \
+Bug Awareness:\
+
+\b0 - A major bug is present in the handling of the the colour selectors in the contour window. It requires to set the range once first. This can be done by clicking range option and then simply selecting Apply. This will then process the range information and allow for the selection of the colour scale. It is understood that a numerical representation of the cursor values would be appreciated.\
+- Using the NMF in the PCA/NMF window is not thread secure and will therefore lock up the main Tkinter loop while running. This does not cause any big issues but does not indicate a hang up of the system. \
+- Some buttons in the UI of the PCA/NMF don\'92t behave accordingly, making this part chaotic. It will be revised.\
+
+\b \
+To come improvements:\
+
+\b0 - Sanity: The .py files will be toughly investigated for sanity and removing unused routines. Also version history manager will be used.\
+- Removing a lorenzian is not supported yet but should come in the next version\
+- The save and load logos should be more explicit.. \
+- A settings file that can be used to specify window sizes for example. \
+- A small Setting window for the overall Application settings\
+- Use the file browser to search for Raw import files
+\b \
+\
+
+\fs48 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Version 0.1.01 Release\
+
+\fs24 \
+New Additions:\
+
+\b0 - Added the version history file.
+\b \
+
+\b0 - Added a quick launch window after a file import has been successful\
+- Added the info  tab into the fitting framework\
+- Added the Save and load options in the fitting management to allow a more logical and easier use.\
+
+\b \
+Fixed MajorBugs:\
+
+\b0 - Fixed Single file management. Component files can be imported again.\
+- Trying to add inclining. Unfortunately reacquires Tk/Tcl 8.6 (hard to get running on windows).\
+- Added the axes label offset option in the plot settings.\
+- Contour Button 
+\b Spectra
+\b0  was replaced by 
+\b Baseline 
+\b0  as it is more representative of what the option does.\
+- Fixed a wrong link of the x and y axis dependencies between the contour subplots. Now moving in x and y in the projections will move the right parameter on the contour plot cursor.\
+- Fixed Saving data in a format with \'91.\'92 as a decimal separator. The coma will now be used in all naming to ensure windows compatibility
+\b \
+\
+Fixed Minor Bugs:\
+
+\b0 - Checked and fixed buttons that were not working as expected in the Contour window\
+- Plot fonts will now be handled more platform specific (11pt for MacOs and 8pt for MS Windows)\
+- Changed fonts in the information window to be more platform specific (basically it loos better on windows)\
+- Reformatted the contour layout with label frames as they allow for a more estethic representation .
+\b \
+
+\b0 - Made the Menus in Windows more adapted to the UI feel\
+- Fixed the the baseline processing window to match the current UI layout\
+- Set the thickness of the Axis elements in the contour plot slightly down to make them less dominant\
+- Changed the layout tin the fitting window. Three tabs were combined and are now \'91Edit\'92. 
+\b \
+
+\b0 - The PCA graph will now be displayed upon initialising the window
+\b \
+
+\b0 - The stickiness of the pointer was fixed in the PCA NMF window framework.
+\b \
+\
+Bug Awareness:\
+
+\b0 - A major bug is present in the handling of the the color selectors in the contour window. It requires to set the range once first. This can be done by clicking range option and then simply selecting Apply. This will then process the range information and allow for the selection of the color scale. It is understood that a numerical representation of the cursor values would be appreciated.\
+- Using the NMF in the PCA/NMF window is not thread secure and will therefore lock up the main Tkinter loop while running. This does not cause any big issues but does not indicate a hang up of the system. \
+- Some buttons in the UI of the PCA/NMF don\'92t behave accordingly, making this part chaotic. It will be revised.
+\b \
+\
+To come improvements:\
+
+\b0 - Some Plot UI windows open as to small by default. A minimal size can set and probably be specified in a more general settings window.\
+- A little prompt window asking what the user wants on import of a dataset
+\b \
+\
+
+\fs48 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\fs24 \
+
+\fs48 Version 0.1.0 Release}
