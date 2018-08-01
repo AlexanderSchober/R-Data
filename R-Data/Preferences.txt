@@ -1,4 +1,0 @@
-<-Version->0.2.03<-Version->
-<-ReleaseDate->10 Nov. 2017<-ReleaseDate->
-<-PathIn-><-PathIn->
-<-PathOut-><-PathOut->
